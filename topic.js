@@ -1,4 +1,3 @@
-//const Kafka = require("kafkajs").Kafka
 const { Kafka } = require("kafkajs");
 
 run();
@@ -6,7 +5,7 @@ async function run() {
   try {
     const kafka = new Kafka({
       clientId: "myapp",
-      brokers: ["husseinmac:9092"],
+      brokers: ["localhost:9092"],
     });
 
     const admin = kafka.admin();
